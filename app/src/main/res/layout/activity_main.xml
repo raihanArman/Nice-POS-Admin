@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fm_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:translationY="-280dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/header"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fm_2"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:translationY="280dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/footer"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fm_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/lv_1"/>
+
+    <LinearLayout
+        android:id="@+id/lv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="20dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentBottom="true">
+
+        <com.irfaan008.irbottomnavigation.SpaceNavigationView
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            app:active_item_color="@color/colorAccent"
+            app:centre_button_color="@color/colorAccent"
+            app:centre_button_icon="@drawable/ic_add_black_24dp"
+            app:inactive_centre_button_icon_color="@android:color/white"
+            app:space_background_color="@android:color/transparent"
+            app:space_item_icon_only_size="25dp"
+            app:space_item_icon_size="30dp" />
+    </LinearLayout>
+
+</RelativeLayout>
